@@ -1,0 +1,48 @@
+<!doctype html> 
+
+<html>
+	<head> 
+		<title>Desafio - Calculadora</title> 
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="icon.png">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<script type="text/javascript">
+			function Calculadora() {
+			var n1=document.getElementById("n1").value
+			var n2=document.getElementById("n2").value
+			total = Number(n1) + Number(n2)
+				document.getElementById("resultado").value = total;
+			}
+			function Zerar() {
+				document.getElementById("n1").value = 0;
+				document.getElementById("n2").value = 0;
+				document.getElementById('resultado').value = 0;
+				Calculadora()
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<div id="warp">
+			<header>
+				<a href="desafio-calculadora.html">
+					<img src="icon.png" align="left" width="70">
+				</a>
+				<h1>Calculadora Básica</h1>
+				<p class="sub">Use a calculadora abaixo para <strong>somar</strong> dois valores. </p>
+			</header>
+		
+			<div id="content">
+				<article>
+					<p class="form">Primeiro valor: <input id="n1" type="number" name="A" value="" title="Digite o primeiro número aqui" autofocus></p>
+					<p class="form">Segundo valor: <input id="n2" type="number" name="B" value="0" title="Digite o segundo número aqui"></p>
+					<p class="form">Resultado: &emsp; &nbsp;&nbsp;<input id="resultado" value="0" title="Resultado" readonly></p>
+					<p class="form"><button type="button" title="Pressione para somar" onclick="Calculadora()">Somar</button><button type="button" title="Pressione para zerar" onclick="Zerar()">Zerar</button></p>
+				</article>
+			</div>
+		</div>
+	<body> 
+</html> 
+
+<!-- Coded by Elias Matheus Melo de Oliveira-->
